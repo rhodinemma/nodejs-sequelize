@@ -1,0 +1,14 @@
+{
+  "name": "nodejs-sequelize",
+  "version": "1.0.0",
+  "description": "working with Sequelize to provide excellent support for database synchronization, eager loading, associations, transactions, and database migrations while reducing development time and preventing SQL injections.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rhodin Emmanuel Nagwere",
+  "license": "ISC",
+  "dependencies": {
+    "sequelize": "^6.21.4"
+  }
+}
