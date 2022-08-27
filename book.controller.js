@@ -38,10 +38,10 @@ const Book = sequelize.define("books", {
 //   .sync()
 //   .then(() => {
 //     Book.create({
-//       title: "Clean Code",
-//       author: "Rhodin Emmanuel Nagwere",
-//       release_date: "2022-09-02",
-//       subject: 3,
+//       title: "Evolving Engineer",
+//       author: "Legacy",
+//       release_date: "2019-02-12",
+//       subject: 4,
 //     })
 //       .then((res) => {
 //         console.log(res);
@@ -65,16 +65,30 @@ const Book = sequelize.define("books", {
 //     });
 // });
 
+// sequelize.sync().then(() => {
+//   Book.findOne({
+//     where: {
+//       id: "2",
+//     },
+//   })
+//     .then((res) => {
+//       console.log(res);
+//     })
+//     .catch((error) => {
+//       console.error("Failed to retrieve data ", error);
+//     });
+// });
+
 sequelize.sync().then(() => {
-  Book.findOne({
+  Book.destroy({
     where: {
-      id: "2",
+      id: 2,
     },
   })
-    .then((res) => {
-      console.log(res);
+    .then(() => {
+      console.log("Record deleted successfully.");
     })
     .catch((error) => {
-      console.error("Failed to retrieve data ", error);
+      console.error("Failed to delete ", error);
     });
 });
